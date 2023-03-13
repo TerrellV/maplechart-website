@@ -1,0 +1,64 @@
+---
+sidebar_position: 0
+sidebar_label: "GET • indicators/"
+sidebar_class_name: endpoint_doc
+---
+
+import { SampleResponse } from "./sample_response.js";
+import MyComponent from "./my_component";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# GET • indicators/
+
+Get all technical indicators and their associated metadata. Use this api to browse the available indicators and their related signals.
+
+## Query Parameters
+
+No query parameters required
+
+## HTTP Responses
+
+<Tabs groupId="test">
+    <TabItem value="200 ✔" default></TabItem>
+    <TabItem value="400 ❌">
+        <MyComponent />
+    </TabItem>
+</Tabs>
+
+## Examples
+
+<Tabs>
+<TabItem value="Python">
+
+```python
+import json
+import requests
+
+r = requests.get(url="https://api.maplechart.com/indicators")
+data = r.json()
+
+print(json.dumps(data, indent=4))
+```
+
+</TabItem>
+<TabItem value="JavaScript">
+
+```JavaScript
+console.log("JavaScript example in progress")
+```
+
+</TabItem>
+<TabItem value="cURL">
+
+```bash
+> curl https://api.maplechart.com/indicators
+```
+
+</TabItem>
+</Tabs>
+
+:::tip
+To quickly see the data returned from this endpoint, navigate to the following url
+using a new tab. https://api.maplechart.com/indicators
+:::

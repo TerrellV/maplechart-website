@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "indicator_id": "TR",
+            "name": "Trailing Return",
+            "description": "--",
+            "signal_ids": [
+                "TR-200D"
+            ]
+        },
+        {
+            "indicator_id": "SMA",
+            "name": "Simple Moving Average",
+            "description": "--",
+            "signal_ids": [
+                "SMA-50D",
+                "SMA-200D",
+                "SMA-100D"
+            ]
+        }
+    ]
+}
