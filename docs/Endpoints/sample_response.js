@@ -3,7 +3,7 @@ import CodeBlock from '@theme/CodeBlock';
 import useBaseUrl from '@docusaurus/useBaseUrl'
 import myData from '/data_responses/indicators.json';
 
-export function SampleResponse({endpoint, show_line_numbers}) {
+export function SampleResponse({endpoint, method = "GET"}) {
 
     let [{ json_str }, setState] = useState({ json_str: '' })
 
@@ -41,7 +41,7 @@ export function SampleResponse({endpoint, show_line_numbers}) {
     return (
         <CodeBlock
             language="json"
-            title="test"
+            title={`${method} 'api.maplechart.com/${endpoint}' status code = 200`}
             showLineNumbers={false}
         >
             {json_str}

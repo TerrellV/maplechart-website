@@ -140,8 +140,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Build by Terrell Vest using Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        darkThem: lightCodeTheme,
+        darkTheme: require('prism-react-renderer/themes/dracula'),
+        additionalLanguages: ['yaml']
       },
     }),
 };

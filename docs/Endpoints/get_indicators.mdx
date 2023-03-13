@@ -17,16 +17,44 @@ Get all technical indicators and their associated metadata. Use this api to brow
 
 No query parameters required
 
-## HTTP Responses
+## Response
 
-<Tabs groupId="test">
-    <TabItem value="200 ✔" default>
-        <SampleResponse endpoint="/indicators" />
-    </TabItem>
-    <TabItem value="400 ❌">
-        <SampleResponse endpoint="/indicators" />
-    </TabItem>
-</Tabs>
+The `/indicators` endpoint will return a json document with a single data property.
+The data property will be an array of objects. See below for more detail.
+
+### Sample
+
+<SampleResponse endpoint="indicators/" />
+
+### JSON Schema
+
+Metadata about the response payload
+
+find a way to use 4 spaces for yaml indentation and better syntax highlighting
+on this theme
+
+```yaml title='payload json schema'
+data:
+  type: array
+  items:
+    type: object
+    properties:
+      indicator_id:
+        type: string
+        unique: true
+        description: a unique identifier representing an indicator
+      description:
+        type: string
+        unique: false
+        description: information about an indicator
+      signal_ids:
+        type: array
+        unique: false
+        description: The signal ids related to this indicator
+      name:
+        type: string
+        unique: false
+```
 
 ## Examples
 
