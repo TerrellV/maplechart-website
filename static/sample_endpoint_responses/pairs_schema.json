@@ -1,0 +1,50 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://api.maplechart.com/pairs/",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "list",
+            "items": {
+                "description": "list of pairs returned from api",
+                "type": "object",
+                "properties": {
+                    "pair_id": {
+                        "type": "string",
+                        "unique": true,
+                        "description": "unique identifier for each pair"
+                    },
+                    "cg_vs_symbol": {
+                        "type": "string",
+                        "description": "coingecko vs currency"
+                    },
+                    "symbol": {
+                        "type": "string",
+                        "description": "trading pair symbol in the format [BASE]/[QUOTE]"
+                    },
+                    "base": {
+                        "#ref": "#def/currencyInfo"
+                    },
+                    "quote": {
+                        "#ref": "#def/currencyInfo"
+                    }
+                }
+            }
+        },
+        "#def": {
+            "currencyInfo": {
+                "type": "object",
+                "properties": {
+                    "currency_id": {
+                        "type": "string",
+                        "description": "unique maplechart identifier for associated coingecko base/quote currency"
+                    },
+                    "cg_id": {
+                        "type": "string",
+                        "description": "unique coingecko.com api currency identifier"
+                    }
+                }
+            }
+        }
+    }
+}

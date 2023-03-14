@@ -1,0 +1,63 @@
+---
+sidebar_position: 1
+sidebar_label: "GET • signals/"
+sidebar_class_name: endpoint_doc
+---
+
+import MyComponent from "./my_component";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import ExamplesSection from "./_examples_section.mdx";
+import schema from "/sample_endpoint_responses/signals_schema.json";
+import response from "/sample_endpoint_responses/signals.json";
+import CodeBlock from "@theme/CodeBlock";
+
+# GET • signals/
+
+Get all signals and their associated metadata. Use this api to browse the available signals and their related indicators.
+
+## Query Parameters
+
+No query parameters required
+
+## Response
+
+The `/signals` endpoint will return a json document with a data property.
+The data property will be an array of objects. Each object represents a signal.
+
+### Sample Payload
+
+<CodeBlock
+    language="json"
+    title="GET 'api.maplechart.com/signals/' status code = 200"
+    showLineNumbers={false}
+>
+    {JSON.stringify(response, null, 4)}
+</CodeBlock>
+
+### JSON Schema
+
+Metadata about the response payload. These schemas follow the https://json-schema.org specification.
+
+<details>
+<summary>Need help understanding the schema ❔</summary>
+
+This is a JSON schema that defines the structure of data that is expected to be returned from an API call to https://api.maplechart.com/signals/.
+
+The json object returned from this endpoint will containa a "data" property. Data will be a list of signals. Each signal object will have a "name" property that is a string, a "signal_id" property that is a unique string, and an "indicator_id" property that is a string representing the ID of the indicator from which the signal was derived.
+
+</details>
+
+<br />
+
+<CodeBlock
+    language="json"
+    title="response.json() schema"
+    showLineNumbers={false}
+>
+    {JSON.stringify(schema, null, 4)}
+</CodeBlock>
+
+## Examples
+
+<ExamplesSection url="https://api.maplechart.com/signals" />

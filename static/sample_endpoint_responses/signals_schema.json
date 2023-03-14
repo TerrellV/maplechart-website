@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://api.maplechart.com/signals/",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "list",
+            "items": {
+                "description": "list of signals returned from api. The unique combination of an indicator and its input represents a signal",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "signal_id": {
+                        "type": "string",
+                        "unique": true
+                    },
+                    "indicator_id": {
+                        "type": "string",
+                        "description": "the indicator_id of which this signal is derived from"
+                    }
+                }
+            }
+        }
+    }
+}

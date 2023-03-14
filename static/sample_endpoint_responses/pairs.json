@@ -1,0 +1,43 @@
+{
+    "data": [
+        {
+            "symbol": "ETH/USD",
+            "pair_id": "eth-usd",
+            "cg_vs_symbol": "USD",
+            "base": {
+                "currency_id": "ETH",
+                "cg_id": "ethereum"
+            },
+            "quote": {
+                "currency_id": "USD",
+                "cg_id": null
+            }
+        },
+        {
+            "symbol": "DOGE/USD",
+            "pair_id": "doge-usd",
+            "cg_vs_symbol": "USD",
+            "base": {
+                "currency_id": "DOGE",
+                "cg_id": "dogecoin"
+            },
+            "quote": {
+                "currency_id": "USD",
+                "cg_id": null
+            }
+        },
+        {
+            "symbol": "BTC/USD",
+            "pair_id": "btc-usd",
+            "cg_vs_symbol": "USD",
+            "base": {
+                "currency_id": "BTC",
+                "cg_id": "bitcoin"
+            },
+            "quote": {
+                "currency_id": "USD",
+                "cg_id": null
+            }
+        }
+    ]
+}

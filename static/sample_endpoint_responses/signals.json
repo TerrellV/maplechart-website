@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "name": "200 Day Simple Moving Average",
+            "signal_id": "SMA-200D",
+            "indicator_id": "SMA"
+        },
+        {
+            "name": "100 Day Trailing Return",
+            "signal_id": "SMA-100D",
+            "indicator_id": "SMA"
+        },
+        {
+            "name": "50 Day Trailing Return",
+            "signal_id": "SMA-50D",
+            "indicator_id": "SMA"
+        },
+        {
+            "name": "200 Day Trailing Return",
+            "signal_id": "TR-200D",
+            "indicator_id": "TR"
+        }
+    ]
+}

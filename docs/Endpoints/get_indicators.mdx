@@ -8,6 +8,10 @@ import { SampleResponse } from "./sample_response.js";
 import MyComponent from "./my_component";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import ExamplesSection from "./_examples_section.mdx";
+import schema from "/sample_endpoint_responses/indicators_schema.json";
+import response from "/sample_endpoint_responses/indicators.json";
+import CodeBlock from "@theme/CodeBlock";
 
 # GET • indicators/
 
@@ -19,77 +23,42 @@ No query parameters required
 
 ## Response
 
-The `/indicators` endpoint will return a json document with a single data property.
-The data property will be an array of objects. See below for more detail.
+The `/indicators` endpoint will return a json document with a data property.
+The data property will be an array of objects. Each object represents a single indicator.
 
-### Sample
+### Sample Payload
 
-<SampleResponse endpoint="indicators/" />
+<CodeBlock
+    language="json"
+    title="GET 'api.maplechart.com/indicators/' status code = 200"
+    showLineNumbers={false}
+>
+    {JSON.stringify(response, null, 4)}
+</CodeBlock>
 
 ### JSON Schema
 
-Metadata about the response payload
+Metadata about the response payload. These schemas follow the https://json-schema.org specification.
 
-find a way to use 4 spaces for yaml indentation and better syntax highlighting
-on this theme
+<details>
+<summary>Need help understanding the schema ❔</summary>
 
-```yaml title='payload json schema'
-data:
-  type: array
-  items:
-    type: object
-    properties:
-      indicator_id:
-        type: string
-        unique: true
-        description: a unique identifier representing an indicator
-      description:
-        type: string
-        unique: false
-        description: information about an indicator
-      signal_ids:
-        type: array
-        unique: false
-        description: The signal ids related to this indicator
-      name:
-        type: string
-        unique: false
-```
+This JSON schema describes the structure of the json object returned by the /indicators endpoint. The returned object has a property called "data", which is a list containing one or more items. Each item in the list represents an indicator and has several properties such as "indicator_id", "name", "description", and "signal_ids".
+
+The "indicator_id" property is a string that uniquely identifies the indicator. The "name" and "description" properties are strings that provide a brief description of the indicator. The "signal_ids" property is a list of strings that represent the IDs of the signals associated with the indicator.
+
+</details>
+
+<br />
+
+<CodeBlock
+    language="json"
+    title="response.json() schema"
+    showLineNumbers={false}
+>
+    {JSON.stringify(schema, null, 4)}
+</CodeBlock>
 
 ## Examples
 
-<Tabs groupId="another">
-
-<TabItem value="Python">
-
-```python
-import json
-import requests
-
-r = requests.get(url="https://api.maplechart.com/indicators")
-data = r.json()
-
-print(json.dumps(data, indent=4))
-```
-
-</TabItem>
-<TabItem value="JavaScript">
-
-```JavaScript
-console.log("JavaScript example in progress")
-```
-
-</TabItem>
-<TabItem value="cURL">
-
-```bash
-> curl https://api.maplechart.com/indicators
-```
-
-</TabItem>
-</Tabs>
-
-:::tip
-To quickly see the data returned from this endpoint, navigate to the following url
-using a new tab. https://api.maplechart.com/indicators
-:::
+<ExamplesSection url="https://api.maplechart.com/indicators" />

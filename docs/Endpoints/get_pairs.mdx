@@ -1,0 +1,60 @@
+---
+sidebar_position: 3
+sidebar_label: 'GET • pairs/'
+sidebar_class_name: endpoint_doc
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import ExamplesSection from "./_examples_section.mdx";
+import schema from "/sample_endpoint_responses/pairs_schema.json";
+import response from "/sample_endpoint_responses/pairs.json";
+import CodeBlock from "@theme/CodeBlock";
+
+# GET • pairs/
+
+Get all pairs and their associated metadata. Use this api to browse available trading pairs.
+
+## Query Parameters
+
+No query parameters required
+
+## Response
+
+The `/pairs` endpoint will return a json document with a data property.
+The data property will be an array of objects. Each object represents a pair.
+
+### Sample Payload
+
+<CodeBlock
+    language="json"
+    title="GET 'api.maplechart.com/pairs/' status code = 200"
+    showLineNumbers={false}
+>
+    {JSON.stringify(response, null, 4)}
+</CodeBlock>
+
+### JSON Schema
+
+Metadata about the response payload. These schemas follow the https://json-schema.org specification.
+
+<details>
+<summary>Need help understanding the schema ❔</summary>
+
+TBD
+
+</details>
+
+<br />
+
+<CodeBlock
+    language="json"
+    title="response.json() schema"
+    showLineNumbers={false}
+>
+    {JSON.stringify(schema, null, 4)}
+</CodeBlock>
+
+## Examples
+
+<ExamplesSection url="https://api.maplechart.com/pairs" />

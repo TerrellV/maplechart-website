@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://api.maplechart.com/indicators/",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "list",
+            "items": {
+                "description": "list of indicators returned from api",
+                "type": "object",
+                "properties": {
+                    "indicator_id": {
+                        "type": "string",
+                        "unique": true
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "signal_ids": {
+                        "type": "list",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
