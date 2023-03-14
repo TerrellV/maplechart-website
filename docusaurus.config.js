@@ -75,10 +75,10 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'MapleChart',
-        // logo: {
-        //   alt: 'Logo',
-        //   src: 'img/logo.svg',
-        // },
+        logo: {
+          alt: 'Logo',
+          src: 'img/logo.svg',
+        },
         hideOnScroll: false,
         items: [
           {

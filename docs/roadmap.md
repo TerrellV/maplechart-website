@@ -1,18 +1,14 @@
 # Roadmap
 
-## 🤙🏾 High Priority
+## 💯 High Priority
 
-* Configure REST api
-  * Setup pair/{pair-id}/metric-series/{metric-id}
-  * Setup pair/{pair-id}/latest-metrics
-* Document set of 10-15 Metrics clearly on maplechart.com
-* Enable seamless api key creation process
-  * Require email validation for api key
-* Setup new cloud account to represent PRD account
+* Add cors configuration to backend api by default
+* Rename path to pairs/{pair_id}/series?signal=TR-200D
+* Document set of 10 indicators clearly
 
 ## 🤞🏾 Medium Priority
+
 * Increase speed of daily core data refresh so that metrics can be refreshed more quickly after daily close
-*
 
 
 ## 🤏🏾 Low Priority
@@ -22,4 +18,5 @@
 
 
 ---
-### 🙃 Backlog (Maybe One Day)
+### 🙃 📌 Backlog (no priority)
+* interactive query tool on maplechart.com
