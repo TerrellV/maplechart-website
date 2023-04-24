@@ -11,6 +11,8 @@ const config = {
   tagline: 'Timeseries indicators for crypto currencies',
   favicon: 'img/favicon.ico',
 
+  staticDirectories: ['public', 'static'],
+
   // Set the production url of your site here
   url: 'https://maplechart.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -75,10 +77,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'MapleChart',
-        logo: {
-          alt: 'Logo',
-          src: 'img/logo.svg',
-        },
+
         hideOnScroll: false,
         items: [
           {
@@ -137,7 +136,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Build by Terrell Vest using Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} MapleChart.com | Built using Docusaurus`,
       },
       prism: {
         darkTheme: darkCodeTheme,

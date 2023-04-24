@@ -1,0 +1,26 @@
+# Percent Changes
+
+## Trailing Return
+
+<p>{data["SMA"]["description"]}</p>
+
+### Formula
+
+```
+(current_price / price_n_days_prior) - 1
+```
+
+import data from "@site/static/signals.json";
+import SignalsExample from "./_signals_table.jsx";
+
+<br />
+
+<SignalsExample signals={data["SMA"]["signals"]} />
+
+## Forward Return
+
+TBD
+
+## Drawdown
+
+TBD

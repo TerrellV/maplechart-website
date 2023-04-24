@@ -1,0 +1,65 @@
+---
+sidebar_position: 4
+sidebar_label: "GET • pairs/signals/"
+sidebar_class_name: endpoint_doc
+slug: get-pairs-signals
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import ExamplesSection from "./_examples_section.mdx";
+import schema from "/sample_endpoint_responses/pairs_series_schema.json";
+import response from "/sample_endpoint_responses/pairs_signals.json";
+import CodeBlock from "@theme/CodeBlock";
+
+# GET • pairs/signals
+
+Get latest recorded signals for set of pairs.
+
+## Path Parameters
+
+No path parameters accepted
+
+## Query Parameters
+
+| Parameter  | Required | Example                   | Description                                                                                                                                             |
+| :--------- | :------: | :------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| pairs      |    NO    | btc-usd, eth-btc, eth-usd | List of _**comma-separated pairs**_ to fetch latest signals for. The `pairs` param cannot be specified with `quote` param. You must use one or neither. |
+| quote      |    NO    | 2018-01-01                | Quote currency to use for selecting trading pairs. The `quote` param cannot be specified with `pairs` param. You must use one or neither.               |
+| next_token |    NO    | 234asdf5!23==             | Used for paginating through results. See pagination guide for more info                                                                                 |
+
+## Response
+
+The `/pairs/signals` endpoint will return a json document with a data property.
+The data property will be an array of objects. Each object contains the most recently recorded signals for a trading pair.
+
+### Pagination
+
+Because the amount of data available from this endpoint is large, it is common for responses to be paginated.
+See the [pagination guide](../pagination) to learn how to handle paginated results.
+
+### Sample payload
+
+_Below payload data may be abbreviated. For illustration purposes only_
+
+<CodeBlock
+    language='json'
+    title="GET 'https://api.maplechart.com/pairs/signals?pairs=eth-usd' status code = 200"
+    showLineNumbers={false}
+>
+    {JSON.stringify(response, null, 4)}
+</CodeBlock>
+
+### JSON Schema
+
+Metadata about the response payload. These schemas follow the https://json-schema.org specification.
+
+:::caution
+json-schema documentation in progress
+:::
+
+<br />
+
+## Examples
+
+<ExamplesSection url='https://api.maplechart.com/pairs/signals?pairs=eth-usd' />

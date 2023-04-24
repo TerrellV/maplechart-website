@@ -34,3 +34,20 @@
   --ifm-color-primary-lightest: #ffeae5;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+
+mark {
+  /* padding: 0.25em; */
+  /* margin-bottom: 1em; */
+  font-style: italic;
+  color: black;
+  background-color: rgb(255, 182, 167, 1);
+}
+.definition {
+  margin: 0.5em 0;
+}
+mark.definition_term {
+  font-weight: bold;
+  color: black;
+}

@@ -1,0 +1,55 @@
+---
+sidebar_position: 6
+sidebar_label: Pagination
+sidebar_class_name: green
+---
+
+import TabItem from "@theme/TabItem";
+import Tabs from "@theme/Tabs";
+import CodeBlock from "@theme/CodeBlock";
+
+# Pagination
+
+## Overview
+
+All `api.maplechart.com` endpoints will only return a certain amount of data in response to a request. If you request
+more data than what can be returned in a single response, the api will paginate the results, returning one page at a time.
+
+You'll know your results have been paginated when the response json object includes a `next_token` property. You are responsible for
+checking for the `next_token` on applicable endpoints and submitting additional requests to "paginate" through the remaining results. If
+the `next_token` attribute is missing in the json response, there are no additional pages to paginate through.
+
+<br />
+
+:::info
+Not all endpoints are designed to return the same amount of data per page. Also, be careful not to paginate through the results too quickly
+or you will receive a 429 "Too many requests" throttling error.
+:::
+
+## Python 3 Example
+
+The below code showcases in simple terms, how to interact with a `next_token` and pass it in subsequent requests. If you are using
+this api for a critical or production application, you might want to write logic for handling unexpected status code (errors).
+
+```py {9,14,16} showLineNumbers title='Get the 200-day simple-moving-average timeseries for ETH/USD'
+import requests
+import time
+
+URL = "https://api.maplechart.com/signals/sma-200d/history?pair=eth-usd"
+
+data = []
+r = requests.get(URL).json()
+data.extend(r["data"])
+next_token = r.get("next_token")
+
+while next_token:
+
+    # pass 'next_token' from previous response as parameter to next response
+    r = requests.get(URL, params={"next_token": next_token}).json()
+    data.extend(r["data"])
+    next_token = r.get("next_token")
+
+    time.sleep(0.2)  # to avoid api throttling
+
+print(data)
+```

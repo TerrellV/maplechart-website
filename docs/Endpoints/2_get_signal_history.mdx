@@ -1,0 +1,77 @@
+---
+sidebar_position: 2
+sidebar_label: "GET • signals/{signal_id}/history/"
+sidebar_class_name: endpoint_doc
+slug: get-signal-history
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import ExamplesSection from "./_examples_section.mdx";
+import schema from "/sample_endpoint_responses/pairs_series_schema.json";
+import response from "/sample_endpoint_responses/pairs_series.json";
+import CodeBlock from "@theme/CodeBlock";
+
+# GET • signal/{signal_id}/history
+
+Get timeseries data for a specific signal and trading pair
+
+## Path Parameters
+
+| Parameter | Description                             | Required | Example  |
+| :-------- | :-------------------------------------- | :------- | :------- |
+| signal_id | unique maplechart.com signal identifier | YES      | sma-200d |
+
+## Query Parameters
+
+| Parameter  | Required | Example       | Description                                                                                         |
+| :--------- | :------: | :------------ | :-------------------------------------------------------------------------------------------------- |
+| pair       |   YES    | btc-usd       | The pair_id for the trading pair to fetch the timeseries signal data for                            |
+| start      |    NO    | 2018-01-01    | Date to use as start of timeseries in YYYY-MM-DD format. Defaults to beginning of available history |
+| end        |    NO    | 2022-12-31    | Date to use as end of timeseries in YYYY-MM-DD format. Defaults to end of available history         |
+| next_token |    NO    | 234asdf5!23== | Used for paginating through results. See pagination guide for more info                             |
+
+## Response
+
+The `/signals/{signal_id}/history` endpoint will return a json document with a data property.
+The data property will be an array of lists. Each list contains a date and a value.
+
+### Pagination
+
+Because the amount of data available from this endpoint is large, it is common for responses to be paginated.
+See the [pagination guide](../pagination) to learn how to handle paginated results.
+
+### Sample payload
+
+_Below payload data may be abbreviated. For illustration purposes only_
+
+<CodeBlock
+    language='json'
+    title="GET 'api.maplechart.com/signals/SMA-200D/history?pair=eth-usd&start=2018-01-01&end=2018-12-31' status code = 200"
+    showLineNumbers={false}
+>
+    {JSON.stringify(response, null, 4)}
+</CodeBlock>
+
+### JSON Schema
+
+Metadata about the response payload. These schemas follow the https://json-schema.org specification.
+
+<details>
+<summary>Need help understanding the schema ❔</summary>
+
+The below schema indicates the response object will contain a "data" property. Data will be a list of lists. Each list
+inside of the 'data' property will contain two values. The first will be a string representation of the open datetime,
+and the next will be the signals corresponding value.
+
+</details>
+
+<br />
+
+<CodeBlock language='json' title='response.json() schema' showLineNumbers={false}>
+    {JSON.stringify(schema, null, 4)}
+</CodeBlock>
+
+## Examples
+
+<ExamplesSection url='https://api.maplechart.com/signals/SMA-200D/history?pair=eth-usd&start=2018-01-01&end=2018-12-31' />

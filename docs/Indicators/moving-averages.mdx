@@ -1,0 +1,27 @@
+# Moving Averages
+
+## Simple Moving Average
+
+<p>{data["SMA"]["description"]}</p>
+
+### Example
+
+For example, to calculate a 3 day simple moving average:
+
+-   gather the price from the current, and previous two days
+-   take the average across those three data points
+
+```
+# SMA result where window size n = 3
+input  = [1, 2, 3, 4, 5, 6]
+output = [-, -, 2, 3, 4, 5]
+# note the two blank values at the start of the output. This is because a
+# 3 day moving average requires at least 3 data points to be calculated.
+```
+
+import data from "@site/static/signals.json";
+import SignalsExample from "./_signals_table.jsx";
+
+<br />
+
+<SignalsExample signals={data["SMA"]["signals"]} />

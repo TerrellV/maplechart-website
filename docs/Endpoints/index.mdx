@@ -1,0 +1,65 @@
+---
+sidebar_position: 2
+sidebar_label: "Endpoints"
+sidebar_class_name: endpoint_doc
+---
+
+# API Overview
+
+## Endpoints
+
+| HTTP Method | Endpoint                                          | Description                                                  |
+| :---------: | :------------------------------------------------ | :----------------------------------------------------------- |
+|     GET     | [indicators/](get-indicators)                     | Get all available `indicators` and their associated metadata |
+|     GET     | [signals/](get-signals)                           | Get all available `signals` and their associated metadata    |
+|     GET     | [signals/{signal_id}/history](get-signal-history) | Get signal history for a given trading pair                  |
+|     GET     | [pairs/](get-pairs)                               | Get all available `pairs` and their associated metadata      |
+|     GET     | [pairs/signals/](get-pairs-signals)               | Get most recent signal values for all trading pairs          |
+
+## Indicators
+
+`Indicators` are hopefully self explanatory. They are technical analysis indicators. Think of these as representing a general formula that can have different
+inputs.
+
+Examples:
+
+-   SMA _(Simple Moving Average)_ - A simple average, using closing price, taken across the previous 'N' trading days
+-   RSI _(Relative Strength Index)_ - Meant to illustrate if an asset is "overbought" or "oversold" using a scale of 0-100
+-   TR _(Trailing Return)_ - The percentage change between the current closing price and the closing price 'N' days prior
+
+## Signals
+
+`Signals` represent the _specifc_ calculation of an indicator. There is a 1 to many
+relationship between indicators and signals. In other words, an indicator might have 1 or more signals related
+to it. But a signal will always relate to only one indicator.
+
+Examples:
+
+-   SMA-200D - 'SMA' indicator calculated using a 200 day lookback period
+-   SMA-50D - 'SMA' indicator calculated using a 50 day lookback period
+-   TR-30D - 'TR' indicator calculated using a 30 day lookback period
+
+## Pairs
+
+`Pairs` represent trading-pairs. They consist of two currencies, a base currency and a quote currency. Generally
+the first symbol represents the 'base' currency and the second symbol represents the 'quote' currency. Maple chart
+refers to pairs in the following format(s): `BASE/QUOTE` or `base-quote`.
+
+Examples of valid pairs:
+
+-   `BTC/USD` Bitcoin quoted in United States Dollars
+-   `ETH/USD` Ether quoted in United States Dollars
+-   `eth-btc` Ether quoted in Bitcoin
+
+<br />
+
+:::tip Tip
+
+When reading 'quotes' or 'prices' for a given trading pair, they can be interpreted as 1 Base Currency = X quote currency
+
+Examples:
+
+-   `BTC/USD = $26,000` _1 Bitcoin is worth 26,000 USD_
+-   `ETH/BTC = 0.066` _1 Ether is worth 0.066 Bitcoin_
+
+:::

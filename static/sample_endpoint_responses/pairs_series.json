@@ -1,0 +1,25 @@
+{
+    "data": [
+        [
+            "2018-01-01T00:00:00Z",
+            356.261
+        ],
+        [
+            "2018-01-02T00:00:00Z",
+            359.215
+        ],
+        [
+            "2018-01-03T00:00:00Z",
+            362.31
+        ],
+        [
+            "2018-01-04T00:00:00Z",
+            365.524
+        ],
+        [
+            "2018-01-05T00:00:00Z",
+            368.994
+        ]
+    ],
+    "next_token": "eyJwayI6ICJTRVJJRVMjU01BLTIwMEQjRVRILVVTRCIsICJzayI6ICIyMDIwLTA5LTI2VDAwOjAwOjAwWiJ9"
+}

@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://api.maplechart.com/pairs/{pair_id}/series",
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "array",
+            "items": {
+                "description": "list of timeseries data",
+                "type": "array",
+                "items": [
+                    {
+                        "type": "string",
+                        "descripion": "open datetime"
+                    },
+                    {
+                        "type": "number",
+                        "descripion": "signal value"
+                    }
+                ]
+            }
+        }
+    }
+}

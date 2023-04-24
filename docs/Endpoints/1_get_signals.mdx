@@ -2,6 +2,7 @@
 sidebar_position: 1
 sidebar_label: "GET • signals/"
 sidebar_class_name: endpoint_doc
+slug: get-signals
 ---
 
 import MyComponent from "./my_component";
@@ -28,7 +29,7 @@ The data property will be an array of objects. Each object represents a signal.
 ### Sample Payload
 
 <CodeBlock
-    language="json"
+    language='json'
     title="GET 'api.maplechart.com/signals/' status code = 200"
     showLineNumbers={false}
 >
@@ -50,14 +51,10 @@ The json object returned from this endpoint will containa a "data" property. Dat
 
 <br />
 
-<CodeBlock
-    language="json"
-    title="response.json() schema"
-    showLineNumbers={false}
->
+<CodeBlock language='json' title='response.json() schema' showLineNumbers={false}>
     {JSON.stringify(schema, null, 4)}
 </CodeBlock>
 
 ## Examples
 
-<ExamplesSection url="https://api.maplechart.com/signals" />
+<ExamplesSection url='https://api.maplechart.com/signals' />

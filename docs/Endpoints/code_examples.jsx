@@ -61,36 +61,3 @@ export default function CodeExamples({url}) {
         </Tabs>
     )
 }
-
-/* <Tabs groupId="another">
-
-<TabItem value="cURL">
-
-```bash
-> curl https://api.maplechart.com/indicators
-```
-
-</TabItem>
-<TabItem value="Python">
-
-```python showLineNumbers
-import json
-import requests
-
-r = requests.get(url="https://api.maplechart.com/indicators")
-data = r.json()
-
-print(json.dumps(data, indent=4))
-```
-
-</TabItem>
-<TabItem value="JavaScript">
-
-```javascript showLineNumbers
-fetch("https://api.maplechart.com/indicators")
-    .then((r) => r.json())
-    .then((data) => console.log(data));
-```
-
-</TabItem>
-</Tabs> */
