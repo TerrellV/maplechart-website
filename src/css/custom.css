@@ -6,7 +6,8 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #ff8870;
+  /* --ifm-color-primary: #ff8870; */
+  --ifm-color-primary: #f8312f;
   --ifm-color-primary-dark: #ff694b;
   --ifm-color-primary-darker: #ff5a39;
   --ifm-color-primary-darkest: #ff2c02;
@@ -16,16 +17,22 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
+  --dark: #1b1b1d;
+  --darker: #030303;
   --dark-green: #113324ff;
+  --green: #3ecc5f;
+  --aqua: #25c2a0;
   --gunmetal: #1f2b34ff;
+  --alt-dark: #0b000e;
   --fall: #ec593cff;
+  --maple: #f8312f;
   --melon: #eea59bff;
   --ghost-white: #f0f1f9ff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #ff8870;
+  --ifm-color-primary: var(--fall);
   --ifm-color-primary-dark: #ff694b;
   --ifm-color-primary-darker: #ff5a39;
   --ifm-color-primary-darkest: #ff2c02;
@@ -35,19 +42,43 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* maplechart.com home page */
 
+.home-hero {
+  padding: 5rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--dark);
+  color: white;
+}
 
-mark {
-  /* padding: 0.25em; */
-  /* margin-bottom: 1em; */
-  font-style: italic;
-  color: black;
-  background-color: rgb(255, 182, 167, 1);
+.navbar.navbar--fixed-top {
+  background-color: var(--dark);
 }
-.definition {
-  margin: 0.5em 0;
+
+#main-landing-content {
+  display: flex;
+  flex-grow: 2;
+  background-color: var(--darker);
+  align-items: start;
+  justify-content: center;
 }
-mark.definition_term {
-  font-weight: bold;
-  color: black;
+
+.row.tabs-container {
+  flex-grow: 1;
+  background-color: blue;
+}
+
+#main-landing-content .tabs-container {
+  flex-grow: 1;
+  margin: 2rem 0;
+}
+
+#main-lading-content .tabItem_node_modules* {
+  background-color: blue;
+}
+
+.footer {
+  background-color: var(--darker);
 }

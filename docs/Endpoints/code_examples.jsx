@@ -9,13 +9,12 @@ const shellCode = (url) => {
 const pythonCode = (url) => {
     const code = `\
 import json
-import requests
+import requests  # pip install requests
 
-url = "${url}"
-payload = requests.get(url).json()
-payload["data"] = payload["data"][:3]  # only keep first 3 items for simplicity
+r = requests.get("${url}")
+data = r.json()["data"]
 
-print(json.dumps(payload, indent=4))\
+print(json.dumps(data, indent=4))\
 `
     return code
 }

@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MapleChart',
-  tagline: 'Timeseries indicators for crypto currencies',
+  title: 'MapleChart API',
+  tagline: 'Source daily time series metrics across 100+ cryptocurrency trading pairs',
   favicon: 'img/favicon.ico',
 
   staticDirectories: ['public', 'static'],
@@ -38,8 +38,7 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -53,7 +52,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
   stylesheets: [
@@ -66,7 +65,6 @@ const config = {
     },
   ],
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
         defaultMode: 'dark',
@@ -74,10 +72,9 @@ const config = {
         respectPrefersColorScheme: false
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'MapleChart',
-
         hideOnScroll: false,
         items: [
           {
@@ -94,49 +91,8 @@ const config = {
         ],
       },
       footer: {
-        style: 'light',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} MapleChart.com | Built using Docusaurus`,
+        style: 'dark',
+        copyright: `Copyright © ${new Date().getFullYear()} MapleChart.com | Built using Docusaurus | Powered by CoinGecko`,
       },
       prism: {
         darkTheme: darkCodeTheme,
