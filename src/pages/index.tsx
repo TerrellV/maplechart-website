@@ -33,7 +33,7 @@ import json
 import requests
 
 params={""}
-r = requests.get("https://api.maplechart.com/signals/sma-200d/history?pair=btc-usd")
+r = requests.get("https://api.maplechart.com/v1/signals/sma-200d/history?pair=btc-usd")
 data = r.json()["data"]
 `
 
@@ -78,28 +78,9 @@ function HomepageContent() {
     }
     </div>
     <div className='row'>
-      <CodeExamples url="https://api.maplechart.com/signals/sma-200d/history?pair=btc-usd"/>
-      {/* <CodeBlock
-        className='col col--12 padding--md margin-vert--lg'
-        language="python"
-        title="get 200 day simple moving average for btc-usd"
-        showLineNumbers
-      >
-        {code_block}
-      </CodeBlock> */}
+      <CodeExamples url="https://api.maplechart.com/v1/signals/sma-200d/history?pair=btc-usd"/>
     </div>
   </div>
-    {/* <div className='row'>
-      <div className='col col--4'>
-        <HomeTextBlock title="Open & Accessible" text="SomeText" />
-      </div>
-      <div className='col col--4'>
-        <HomeTextBlock title="Thuroughly Documented" text="SomeText" />
-      </div>
-      <div className='col col--4'>
-        <HomeTextBlock title="" text="SomeText" />
-      </div>
-    </div> */}
 }
 
 

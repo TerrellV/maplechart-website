@@ -14,25 +14,23 @@ _Progress_
 * ✔ rename to pairs/signals endpoint
 * ✔ Add pagination guide
 * ✔ Rename to signals/{signal_id}?/series?pair=btc-usd
-* 🐌 Troubleshoot new data NOT being captured few minutes after close
+* ✔ Troubleshoot new data NOT being captured few minutes after close
 * ✔ Try and refresh data for failed pairs; if these fail; raise error
 * ✔ write a bunch of metadata about each raw data refresh to db after every run
-* ✔ Add better alerts for failed pipeline executions
 * ✔ Document, Code, & Add following signals to system
   * ✔ SMA [20D, 50D, 100D, 200D]
   * ✔ TR [1D, 7D, 30D, 90D, YTD, 1Y, 3Y, 5Y]s
 * ✔ Source signal data dynamically from api for documentation
+* ⬛ Add better alerts for stale data
 * ⬛ Enable email for support@maplechart.com feedback@maplechart.com
 * ⬛ Source indicator data dynamically from api for documentation
 * ✔ Add 3 pairs
 * ⬛ Add common top 10 pairs
-* ⌛ Update landing page
-* ⬛ Build site and copy to production environment
+* ✔ Update first version of landing page
 * ✔ Turn on daily write to timeseries db
-* ⬛ Retire old db table; use newly named non timeseries production table
 * ⬛ blog post on alpha release
-* ⬛ prepare waf, just incase api starts getting hammored
-* ⬛ review throttling limits on http api endpoints
+* ⬛ Build site and copy to production environment
+* ⬛ Retire old db table; use newly named non timeseries production table
 
 ### Production 1.0.0
 

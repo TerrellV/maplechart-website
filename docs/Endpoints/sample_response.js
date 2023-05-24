@@ -38,7 +38,7 @@ export function SampleResponse({endpoint, method = "GET"}) {
     return (
         <CodeBlock
             language="json"
-            title={`${method} 'api.maplechart.com/${endpoint}' status code = 200`}
+            title={`${method} 'api.maplechart.com/v1/${endpoint}' status code = 200`}
             showLineNumbers={false}
         >
             {json_str}

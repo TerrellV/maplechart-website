@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://api.maplechart.com/signals/",
+    "$id": "https://api.maplechart.com/v1/signals/",
     "type": "object",
     "properties": {
         "data": {

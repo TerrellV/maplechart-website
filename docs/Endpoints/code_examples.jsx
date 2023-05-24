@@ -11,7 +11,8 @@ const pythonCode = (url) => {
 import json
 import requests  # pip install requests
 
-r = requests.get("${url}")
+url = "${url}"
+r = requests.get(url)
 data = r.json()["data"]
 
 print(json.dumps(data, indent=4))\

@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://api.maplechart.com/pairs/{pair_id}/series",
+    "$id": "https://api.maplechart.com/v1/pairs/{pair_id}/series",
     "type": "object",
     "properties": {
         "data": {

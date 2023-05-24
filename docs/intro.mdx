@@ -13,10 +13,10 @@ import ExamplesSection from "./Endpoints/_examples_section.mdx";
 -   No authentication required 🔓
 -   Rate limits 🐇 applied at ~10 requests per second
 -   Endpoints [documented here](/docs/endpoints)
--   Core data (price, volume, marketcap) is sourced from [CoinGecko.com](https://www.coingecko.com/en/api)
--   All non-core data points (signals / indicators) are calculated by maplechart.com
+-   Core data (price, volume, marketcap) is sourced from [CoinGecko](https://www.coingecko.com/en/api). (*CoinGecko API [Terms of Use](https://www.coingecko.com/en/api_terms) 👀*)
+-   All non-core data points (signals / indicators) are calculated by MapleChart.com
 -   If you find bugs 🐛, please email support@maplechart.com
--   Data updated once daily 🕛 ~ 00:30:00 UTC (30 min after candle close)
+-   Data updated once daily 🕛 ~ 01:00:00 UTC (1 hr after candle close)
 
 :::tip Site Navigation
 The fastest and most efficient way to navigate this site is by using the primary sidebar on the left of the page. Also,
@@ -25,7 +25,7 @@ on most pages, you'll notice a Table of Contents (TOC) on the right. The TOC, wi
 
 ## URLs
 
-> root api address → https://api.maplechart.com
+> root api address → https://api.maplechart.com/v1
 
 ## Quick Start ~30 Sec
 
@@ -33,4 +33,4 @@ To fetch timeseries 200D simple moving average data for ETH-USD, make a get requ
 and specify `eth-usd` as your pair as a query parameter. You can only fetch one timeseries dataset at a time. To fetch a differnt
 signal, swap out `sma-200d` with an alternate `signal_id`.
 
-<ExamplesSection url='https://api.maplechart.com/signals/sma-200d/history?pair=eth-usd' />
+<ExamplesSection url='https://api.maplechart.com/v1/signals/sma-200d/history?pair=eth-usd' />

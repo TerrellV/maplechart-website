@@ -7,6 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+
   title: 'MapleChart API',
   tagline: 'Source daily time series metrics across 100+ cryptocurrency trading pairs',
   favicon: 'img/favicon.ico',
@@ -33,6 +34,10 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  customFields: {
+    "rootAPIUrl": "https://api.maplechart.com/v1"
   },
 
   presets: [
@@ -92,7 +97,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} MapleChart.com | Built using Docusaurus | Powered by CoinGecko`,
+        copyright: `Copyright © ${new Date().getFullYear()} MapleChart.com &nbsp; Docs Powered By <a href="https://docusaurus.io/docs">Docusaurus</a> &nbsp; Data Powered By <a href="https://www.coingecko.com/en/api">CoinGecko</a>`,
       },
       prism: {
         darkTheme: darkCodeTheme,

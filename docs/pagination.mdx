@@ -35,7 +35,7 @@ this api for a critical or production application, you might want to write logic
 import requests
 import time
 
-URL = "https://api.maplechart.com/signals/sma-200d/history?pair=eth-usd"
+URL = "https://api.maplechart.com/v1/signals/sma-200d/history?pair=eth-usd"
 
 data = []
 r = requests.get(URL).json()

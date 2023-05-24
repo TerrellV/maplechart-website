@@ -13,6 +13,7 @@ import ExamplesSection from "./_examples_section.mdx";
 import schema from "/sample_endpoint_responses/indicators_schema.json";
 import response from "/sample_endpoint_responses/indicators.json";
 import CodeBlock from "@theme/CodeBlock";
+import EndpointResponse from "./sample_endpoint_response.jsx"
 
 # GET • indicators/
 
@@ -29,13 +30,12 @@ The data property will be an array of objects. Each object represents a single i
 
 ### Sample Payload
 
-<CodeBlock
-    language='json'
-    title="GET 'api.maplechart.com/indicators/' status code = 200"
-    showLineNumbers={false}
->
-    {JSON.stringify(response, null, 4)}
-</CodeBlock>
+<EndpointResponse endpoint="/indicators" max_items={3}/>
+
+:::note
+The number of items in the above response may be truncated for documentation purposes. However, all unique fields should be present so that you
+gain an accurate sense for the shape and structure of the returned json objects.
+:::
 
 ### JSON Schema
 
@@ -58,4 +58,4 @@ The "indicator_id" property is a string that uniquely identifies the indicator. 
 
 ## Examples
 
-<ExamplesSection url='https://api.maplechart.com/indicators' />
+<ExamplesSection url='https://api.maplechart.com/v1/indicators' />

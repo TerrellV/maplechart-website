@@ -11,6 +11,7 @@ import ExamplesSection from "./_examples_section.mdx";
 import schema from "/sample_endpoint_responses/pairs_series_schema.json";
 import response from "/sample_endpoint_responses/pairs_signals.json";
 import CodeBlock from "@theme/CodeBlock";
+import EndpointResponse from "./sample_endpoint_response.jsx";
 
 # GET • pairs/signals
 
@@ -38,17 +39,14 @@ The data property will be an array of objects. Each object contains the most rec
 Because the amount of data available from this endpoint is large, it is common for responses to be paginated.
 See the [pagination guide](../pagination) to learn how to handle paginated results.
 
-### Sample payload
+### Sample Payload
 
-_Below payload data may be abbreviated. For illustration purposes only_
+<EndpointResponse endpoint="/pairs/signals?pairs=sol-btc" max_items={1}/>
 
-<CodeBlock
-    language='json'
-    title="GET 'https://api.maplechart.com/pairs/signals?pairs=eth-usd' status code = 200"
-    showLineNumbers={false}
->
-    {JSON.stringify(response, null, 4)}
-</CodeBlock>
+:::note
+The number of items in the above response may be truncated for documentation purposes. However, all unique fields should be present so that you
+gain an accurate sense for the shape and structure of the returned json objects.
+:::
 
 ### JSON Schema
 
@@ -62,4 +60,4 @@ json-schema documentation in progress
 
 ## Examples
 
-<ExamplesSection url='https://api.maplechart.com/pairs/signals?pairs=eth-usd' />
+<ExamplesSection url='https://api.maplechart.com/v1/pairs/signals?pairs=eth-usd' />

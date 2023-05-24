@@ -4,7 +4,7 @@
 import requests
 import time
 
-URL = "https://api.maplechart.com/pairs/eth-usd/series?signal=sma-200d"
+URL = "https://api.maplechart.com/v1/pairs/eth-usd/series?signal=sma-200d"
 
 data = []
 r = requests.get(URL).json()

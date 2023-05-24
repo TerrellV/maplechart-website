@@ -12,6 +12,7 @@ import ExamplesSection from "./_examples_section.mdx";
 import schema from "/sample_endpoint_responses/signals_schema.json";
 import response from "/sample_endpoint_responses/signals.json";
 import CodeBlock from "@theme/CodeBlock";
+import EndpointResponse from "./sample_endpoint_response.jsx"
 
 # GET • signals/
 
@@ -28,13 +29,13 @@ The data property will be an array of objects. Each object represents a signal.
 
 ### Sample Payload
 
-<CodeBlock
-    language='json'
-    title="GET 'api.maplechart.com/signals/' status code = 200"
-    showLineNumbers={false}
->
-    {JSON.stringify(response, null, 4)}
-</CodeBlock>
+<EndpointResponse endpoint="/signals" max_items={2}/>
+
+:::note
+The number of items in the above response may be truncated for documentation purposes. However, all unique fields should be present so that you
+gain an accurate sense for the shape and structure of the returned json objects.
+:::
+
 
 ### JSON Schema
 
@@ -43,7 +44,7 @@ Metadata about the response payload. These schemas follow the https://json-schem
 <details>
 <summary>Need help understanding the schema ❔</summary>
 
-This is a JSON schema that defines the structure of data that is expected to be returned from an API call to https://api.maplechart.com/signals/.
+This is a JSON schema that defines the structure of data that is expected to be returned from an API call to https://api.maplechart.com/v1/signals/.
 
 The json object returned from this endpoint will containa a "data" property. Data will be a list of signals. Each signal object will have a "name" property that is a string, a "signal_id" property that is a unique string, and an "indicator_id" property that is a string representing the ID of the indicator from which the signal was derived.
 
@@ -57,4 +58,4 @@ The json object returned from this endpoint will containa a "data" property. Dat
 
 ## Examples
 
-<ExamplesSection url='https://api.maplechart.com/signals' />
+<ExamplesSection url='https://api.maplechart.com/v1/signals' />

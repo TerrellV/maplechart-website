@@ -21,7 +21,7 @@ export default function SignalsExample({ indicator_id, indicator_name }) {
         if (signals === null || signalsDate != today || signals === "null") {
             // write a javascript function to get related signals to a list of indicators
             console.log("Fetching signals from api")
-            fetch("https://api.maplechart.com/signals")
+            fetch("https://api.maplechart.com/v1/signals")
                 .then(r => {
                     return r.json()
                 })
