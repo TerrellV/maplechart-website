@@ -10,8 +10,7 @@ const config = {
 
   title: 'MapleChart API',
   tagline: 'Source daily time series metrics across 100+ cryptocurrency trading pairs',
-  favicon: 'img/favicon.ico',
-
+  favicon: 'img/logo_color.png',
   staticDirectories: ['public', 'static'],
 
   // Set the production url of your site here
@@ -81,6 +80,17 @@ const config = {
       navbar: {
         title: 'MapleChart',
         hideOnScroll: false,
+        logo: {
+          alt: 'Site Logo',
+          src: 'img/logo_color.png',
+          srcDark: 'img/logo_color.png',
+          href: '/',
+          target: '_self',
+          width: 32,
+          height: 32,
+          className: 'custom-navbar-logo-class',
+          // style: {border: 'solid red'}
+        },
         items: [
           {
             type: 'doc',

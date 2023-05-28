@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react"
-
+import GetApiData from './_get_api_data'
 
 export default function SignalsExample({ indicator_id, indicator_name }) {
 
-    // const [indicators, setIndicators] = useState([])
     const [signals, setSignals] = useState([])
 
     function filter_signals(all_signals) {
@@ -14,33 +13,13 @@ export default function SignalsExample({ indicator_id, indicator_name }) {
         setSignals(signals)
     }
 
-    function get_signals() {
-        const today = new Date().toISOString().slice(0, 10)
-        let signals = localStorage.getItem("signals")
-        let signalsDate = localStorage.getItem("signalsDate")
-        if (signals === null || signalsDate != today || signals === "null") {
-            // write a javascript function to get related signals to a list of indicators
-            console.log("Fetching signals from api")
-            fetch("https://api.maplechart.com/v1/signals")
-                .then(r => {
-                    return r.json()
-                })
-                .then(data => {
-                    const all_signals = data["data"]
-                    localStorage.setItem("signals", JSON.stringify(all_signals))
-                    localStorage.setItem("signalsDate", today)
-                    filter_signals(all_signals)
-                })
-        } else {
-            console.log("Signals found in cache")
-            filter_signals(JSON.parse(signals))
-        }
-
-    }
-
     useEffect(() => {
-        console.log("use effect")
-        get_signals()
+        GetApiData("https://api.maplechart.com/v1/signals").then(
+            data => {
+                let signals = data["data"]
+                filter_signals(signals)
+            }
+        )
     }, [])
 
     return (

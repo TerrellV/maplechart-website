@@ -10,7 +10,6 @@ _`🎯 Target: May 2023`_
 
 _Progress_
 
-* ⌛ Document pairs/signals; (Update schema doc later when closer to release)
 * ✔ rename to pairs/signals endpoint
 * ✔ Add pagination guide
 * ✔ Rename to signals/{signal_id}?/series?pair=btc-usd
@@ -21,16 +20,15 @@ _Progress_
   * ✔ SMA [20D, 50D, 100D, 200D]
   * ✔ TR [1D, 7D, 30D, 90D, YTD, 1Y, 3Y, 5Y]s
 * ✔ Source signal data dynamically from api for documentation
-* ⬛ Add better alerts for stale data
-* ⬛ Enable email for support@maplechart.com feedback@maplechart.com
-* ⬛ Source indicator data dynamically from api for documentation
+* ✔ Add better alerts for stale data
+* ✔ Enable email for feedback@maplechart.com
+* ✔ Source indicator data dynamically from api for documentation
 * ✔ Add 3 pairs
 * ⬛ Add common top 10 pairs
 * ✔ Update first version of landing page
 * ✔ Turn on daily write to timeseries db
 * ⬛ blog post on alpha release
 * ⬛ Build site and copy to production environment
-* ⬛ Retire old db table; use newly named non timeseries production table
 
 ### Production 1.0.0
 
@@ -45,6 +43,7 @@ _Progress_
   * ⬛ Add /currencies?quote-only=true endpoint
 * ⬛ Bulk load 500 currencies
 * ⬛ Document, Code, & Following signals to system
+* ⬛ Retire old db table; use newly named non timeseries production table
   * ⬛ CORR-BTC [30D, 60D, 90D, 180D]
   * ⬛ BETA-BTC [30D, 60D, 90D, 180D]
   * ⬛ LR-BLND-SLOPE [[30, 60, 90], [25,100]]

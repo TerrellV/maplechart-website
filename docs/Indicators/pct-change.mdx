@@ -1,8 +1,11 @@
+import SignalsExample from "./_signals_for_indicator_table.jsx";
+import IndicatorDescription from "./_indicator_description"
+
 # Percent Changes
 
 ## Trailing Return
+<IndicatorDescription indicator_id="TR"/>
 
-<p>{data["SMA"]["description"]}</p>
 
 ### Formula
 
@@ -10,8 +13,6 @@
 (current_price / price_n_days_prior) - 1
 ```
 
-import data from "@site/static/signals.json";
-import SignalsExample from "./_signals_for_indicator_table.jsx";
 
 <br />
 
