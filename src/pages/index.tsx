@@ -1,11 +1,7 @@
 import React from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import CodeBlock from '@theme/CodeBlock';
-import styles from './index.module.css';
 import CodeExamples from '@site/docs/endpoints/code_examples';
 
 
@@ -14,7 +10,8 @@ function HomepageHeader() {
   return (
     <header className="hero hero--primary home-hero">
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title + "🍁"}</h1>
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className=""><i>Beta release v0.9.0</i></p>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div>
           <Link

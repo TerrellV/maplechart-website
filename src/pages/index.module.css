@@ -4,32 +4,8 @@
  */
 
 
-
-
-/* .heroBanner a { */
-  /* color: white; */
-  /* font-weight: 500; */
-  /* padding: 0.75rem 1.5rem; */
-  /* border-radius: 100rem; */
-  /* border: 0px; */
-  /* background-color: var(--melon); */
-  /* background-color: var(--ifm-color-primary); */
-  /* background-color: var(--ifm-color-primary-dark); */
-  /* background-color: var(--ifm-color-primary-darker); */
-  /* background-color: var(--ifm-color-primary-darkest); */
-  /* background-color: var(--ifm-color-primary-light); */
-  /* background-color: var(--ifm-color-primary-lighter); */
-  /* background-color: var(--ifm-color-primary-lightest); */
-/* } */
-
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
 }
-
-/* .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
